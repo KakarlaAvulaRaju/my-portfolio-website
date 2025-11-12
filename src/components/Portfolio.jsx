@@ -1,0 +1,264 @@
+import React, { useState } from "react";
+import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
+
+const Portfolio = () => {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+
+  const cardItem = [
+    {
+      id: 1,
+      logo: "/public/Get Riskdx Image.png",
+      name: "RiskDX - Amore Insurance",
+      tittle: "Online digital distribution and underwriting platform for insurance companies with automated decision-making capabilities.Supports both direct-to-consumer and agent-assisted channels with automated decision- making and seamless policy delivery.",
+      videoLink: "https://getriskdx.com",
+      techStack: ["Angular 8", "C#", "ASP.NET Core", "EF Core", "MySQL", "HTML", "CSS", "SCSS", "Bootstrap", "PrimeNG", "Abp Template",
+        "Azure Functions", "Syncfusion", "Azure Cognitive Services"
+      ]
+    },
+    {
+      id: 2,
+      logo: "/public/Parisa Pajooh Financial.png",
+      name: "Parisa Pajooh Financial",
+      tittle: "A Fully hosted, customizable website for financial professionals with personalized branding, integrated a seamless path to purchase insurance 'Buy Now'. Led development and managed a team for implementation and white-labeled extensions with RiskDX.",
+      videoLink: "https://parisafinancial.com/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    },
+    {
+      id: 3,
+      logo: "/public/Get Customplan Finanacial.png",
+      name: "Customplan Financial",
+      tittle: "Collaborative platform providing comprehensive life and health insurance solutions with personalized guidance.",
+      videoLink: "https://getcustomplanfinancial.com/",
+      techStack: ["ASP.NET MVC", "HTML", "CSS", "Bootstrap"]
+    },
+    {
+      id: 4,
+      logo: "/public/Smartplan Financial.png",
+      name: "Smart Plan Financial",
+      tittle: "Digital platform for financial professionals with personalized branding and integrated insurance purchasing.",
+      videoLink: "https://riskdxpremiumsmartplanfinancial.azurewebsites.net/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    },
+    // Additional projects that will be shown when expanded
+    {
+      id: 5,
+      logo: "/public/Get Customplan Finanacial.png",
+      name: "Amore Insurance",
+      tittle: "Amore Insurance is a White-labeled application built on CustomPlan Financial Advisors offering life and health insurance solutions with RiskDX.",
+      videoLink: "https://amoreinsurance.ca/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    },
+    {
+      id: 6,
+      logo: "/public/Financial Blueprint.png",
+      name: "Financial Blueprint",
+      tittle: "White-labeled project derived from Amoré Parisa Pajooh Financial.",
+      videoLink: "https://riskdxpremiumfinancialblueprint.azurewebsites.net/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    }
+  ];
+
+  const additionalProjects = [
+    {
+      id: 7,
+      name: "Amore Insurance Info",
+      logo: "/public/Amore Insurance Info.png",
+      tittle: "Amore Insurance Info is Empowering Advisors with AI-Powered Life Insurance, RiskDX.",
+      videoLink: "https://amoreinsurance.info/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    },
+    {
+      id: 8,
+      name: "Advisor Resource Group",
+      logo: "/public/Advisor Resource Group.png",
+      tittle: "Advisor Resource Group Inc. is the go-to partner for independent financial advisors in Canada, providing innovative technology solutions, comprehensive services, and expert guidance on business succession.",
+      videoLink: "https://advisorresourcegroup.com/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    },
+    {
+      id: 9,
+      name: "Huumans Single Page",
+      logo: "/public/Huumans Insurance.png",
+      tittle: "Huumans Single Page is a White-labeled application offering life and health insurance solutions with RiskDX.",
+      videoLink: "https://riskdxsinglepagehuumans.azurewebsites.net/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    },
+    {
+      id: 10,
+      name: "Amore Single Page",
+      logo: "/public/Customplan Single Page Application.png",
+      tittle: "Amore Single Page is a White-labeled application built on CustomPlan Financial Advisors offering life and health insurance solutions with RiskDX.",
+      videoLink: "https://riskdxsinglepageamore.azurewebsites.net/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    },
+    {
+      id: 11,
+      name: "MBE Insurance",
+      logo: "/public/MB Insurance.png",
+      tittle: "MBE Insurance is a White-labeled application offering life and health insurance solutions with RiskDX.",
+      videoLink: "https://riskdxsinglepagembeinsurence.azurewebsites.net/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    },
+    {
+      id: 12,
+      logo: "/public/CAA for Life.png",
+      name: "CAA Life Advisory",
+      tittle: "CAA Life Advisory is a White-labeled application built on CustomPlan Financial Advisors offering life and health insurance solutions with RiskDX.",
+      videoLink: "https://caaforlife.riskdx.ca/",
+      techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
+    },
+  ];
+
+  const displayedProjects = showAllProjects ? cardItem : cardItem.slice(0, 4);
+
+  const toggleProjects = () => {
+    setShowAllProjects(!showAllProjects);
+  };
+
+  return (
+    <section name="Portfolio" className="py-20 px-6">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">My Portfolio</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 mx-auto rounded-full mb-4"></div>
+          <p className="text-gray-300">Featured Projects & Real-World Applications</p>
+        </div>
+
+        {/* Main Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {displayedProjects.map(({ id, logo, name, videoLink, tittle, techStack }) => (
+            <div
+              key={id}
+              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-2xl hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-emerald-400/50"
+            >
+              <div className="relative overflow-hidden rounded-xl mb-6">
+                <img
+                  src={logo}
+                  alt={name}
+                  className="w-full h-48 object-cover-fit transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                  {name}
+                </h3>
+
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {tittle}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {techStack.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 border border-emerald-500/30"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-4 pt-4">
+                  <a
+                    href={videoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-medium transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/25 pointer-events-none opacity-60 cursor-not-allowed"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Projects Section (shown when expanded) */}
+        {showAllProjects && (
+          <div className="mt-12">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">More Projects I've Contributed To</h3>
+              <p className="text-gray-400">Role: Full Stack Developer & Team Lead</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {additionalProjects.map(({ id, logo, tittle, name, videoLink, techStack }) => (
+                <div
+                  key={id}
+                  className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-xl hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-emerald-400/50"
+                >
+                  <div className="relative overflow-hidden rounded-xl mb-6">
+                    <img
+                      src={logo}
+                      alt={name}
+                      className="w-full h-48 object-cover-fit transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="space-y-4">
+                    <h4 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                      {name}
+                    </h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {tittle}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {techStack.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 text-xs rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 border border-emerald-500/30"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex gap-4 pt-4">
+                      <a
+                        href={videoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-medium transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/25 pointer-events-none opacity-60 cursor-not-allowed"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live Demo
+                      </a>
+                    </div>
+ 
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Toggle Button */}
+        <div className="text-center mt-16">
+          <p className="text-gray-400 mb-6">
+            {showAllProjects ? "Showing all projects" : "Want to see more of my work?"}
+          </p>
+          <button
+            onClick={toggleProjects}
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold transition-all duration-300 shadow-lg shadow-emerald-500/50 hover:scale-105 cursor-pointer"
+          >
+            {showAllProjects ? (
+              <>
+                <ChevronUp className="w-4 h-4" />
+                Show Less Projects
+              </>
+            ) : (
+              <>
+                <ChevronDown className="w-4 h-4" />
+                View All Projects
+              </>
+            )}
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+export default Portfolio;
