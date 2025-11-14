@@ -48,7 +48,7 @@ const Home = () => {
               <br />
               <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 text-transparent bg-clip-text">
                 <ReactTyped
-                  strings={["Fullstack Developer", "Frontend Developer", "Backend Developer"]}
+                  strings={["Frontend Developer", "Backend Developer", "Fullstack Developer"]}
                   typeSpeed={150}
                   backSpeed={100}
                   backDelay={1000}

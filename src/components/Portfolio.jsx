@@ -7,7 +7,7 @@ const Portfolio = () => {
   const cardItem = [
     {
       id: 1,
-      logo: "/public/Get Riskdx Image.png",
+      logo: "Get Riskdx Image.png",
       name: "RiskDX - Amore Insurance",
       tittle: "Online digital distribution and underwriting platform for insurance companies with automated decision-making capabilities.Supports both direct-to-consumer and agent-assisted channels with automated decision- making and seamless policy delivery.",
       videoLink: "https://getriskdx.com",
@@ -17,7 +17,7 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      logo: "/public/Parisa Pajooh Financial.png",
+      logo: "Parisa Pajooh Financial.png",
       name: "Parisa Pajooh Financial",
       tittle: "A Fully hosted, customizable website for financial professionals with personalized branding, integrated a seamless path to purchase insurance 'Buy Now'. Led development and managed a team for implementation and white-labeled extensions with RiskDX.",
       videoLink: "https://parisafinancial.com/",
@@ -25,7 +25,7 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      logo: "/public/Get Customplan Finanacial.png",
+      logo: "Get Customplan Finanacial.png",
       name: "Customplan Financial",
       tittle: "Collaborative platform providing comprehensive life and health insurance solutions with personalized guidance.",
       videoLink: "https://getcustomplanfinancial.com/",
@@ -33,7 +33,7 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      logo: "/public/Smartplan Financial.png",
+      logo: "Smartplan Financial.png",
       name: "Smart Plan Financial",
       tittle: "Digital platform for financial professionals with personalized branding and integrated insurance purchasing.",
       videoLink: "https://riskdxpremiumsmartplanfinancial.azurewebsites.net/",
@@ -42,7 +42,7 @@ const Portfolio = () => {
     // Additional projects that will be shown when expanded
     {
       id: 5,
-      logo: "/public/Get Customplan Finanacial.png",
+      logo: "Get Customplan Finanacial.png",
       name: "Amore Insurance",
       tittle: "Amore Insurance is a White-labeled application built on CustomPlan Financial Advisors offering life and health insurance solutions with RiskDX.",
       videoLink: "https://amoreinsurance.ca/",
@@ -50,7 +50,7 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      logo: "/public/Financial Blueprint.png",
+      logo: "Financial Blueprint.png",
       name: "Financial Blueprint",
       tittle: "White-labeled project derived from Amoré Parisa Pajooh Financial.",
       videoLink: "https://riskdxpremiumfinancialblueprint.azurewebsites.net/",
@@ -62,7 +62,7 @@ const Portfolio = () => {
     {
       id: 7,
       name: "Amore Insurance Info",
-      logo: "/public/Amore Insurance Info.png",
+      logo: "Amore Insurance Info.png",
       tittle: "Amore Insurance Info is Empowering Advisors with AI-Powered Life Insurance, RiskDX.",
       videoLink: "https://amoreinsurance.info/",
       techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
@@ -70,7 +70,7 @@ const Portfolio = () => {
     {
       id: 8,
       name: "Advisor Resource Group",
-      logo: "/public/Advisor Resource Group.png",
+      logo: "Advisor Resource Group.png",
       tittle: "Advisor Resource Group Inc. is the go-to partner for independent financial advisors in Canada, providing innovative technology solutions, comprehensive services, and expert guidance on business succession.",
       videoLink: "https://advisorresourcegroup.com/",
       techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
@@ -78,7 +78,7 @@ const Portfolio = () => {
     {
       id: 9,
       name: "Huumans Single Page",
-      logo: "/public/Huumans Insurance.png",
+      logo: "Huumans Insurance.png",
       tittle: "Huumans Single Page is a White-labeled application offering life and health insurance solutions with RiskDX.",
       videoLink: "https://riskdxsinglepagehuumans.azurewebsites.net/",
       techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
@@ -86,7 +86,7 @@ const Portfolio = () => {
     {
       id: 10,
       name: "Amore Single Page",
-      logo: "/public/Customplan Single Page Application.png",
+      logo: "Customplan Single Page Application.png",
       tittle: "Amore Single Page is a White-labeled application built on CustomPlan Financial Advisors offering life and health insurance solutions with RiskDX.",
       videoLink: "https://riskdxsinglepageamore.azurewebsites.net/",
       techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
@@ -94,14 +94,14 @@ const Portfolio = () => {
     {
       id: 11,
       name: "MBE Insurance",
-      logo: "/public/MB Insurance.png",
+      logo: "MB Insurance.png",
       tittle: "MBE Insurance is a White-labeled application offering life and health insurance solutions with RiskDX.",
       videoLink: "https://riskdxsinglepagembeinsurence.azurewebsites.net/",
       techStack: ["React TS", "Tailwind CSS", "ASP.NET Core"]
     },
     {
       id: 12,
-      logo: "/public/CAA for Life.png",
+      logo: "CAA for Life.png",
       name: "CAA Life Advisory",
       tittle: "CAA Life Advisory is a White-labeled application built on CustomPlan Financial Advisors offering life and health insurance solutions with RiskDX.",
       videoLink: "https://caaforlife.riskdx.ca/",
@@ -227,7 +227,7 @@ const Portfolio = () => {
                         Live Demo
                       </a>
                     </div>
- 
+
                   </div>
                 </div>
               ))}
