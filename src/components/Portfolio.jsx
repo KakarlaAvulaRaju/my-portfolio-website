@@ -116,12 +116,35 @@ const Portfolio = () => {
   };
 
   return (
-    <section name="Portfolio" className="py-20 px-6">
+    <section name="Portfolio" className="py-20 px-6 bg-slate-50">
+      <style>{`
+        .live-demo-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.75rem 2rem;
+          border-radius: 10px;
+          font-weight: 600;
+          color: #fff;
+          background-image: linear-gradient(to right, #1E3A8A 0%, #3B82F6 51%, #1E3A8A 100%);
+          background-size: 200% auto;
+          background-position: left center;
+          box-shadow: 0 0 20px #eee, 0 4px 12px #3B82F6 10%;
+          transition: background-position 0.3s, transform 0.3s, box-shadow 0.3s;
+          cursor: pointer;
+          border: none;
+        }
+        .live-demo-btn:hover {
+          background-position: right center;
+          transform: scale(1.05);
+          box-shadow: 0 0 30px #3B82F6 30%;
+        }
+      `}</style>
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">My Portfolio</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 mx-auto rounded-full mb-4"></div>
-          <p className="text-gray-300">Featured Projects & Real-World Applications</p>
+          <h2 className="text-4xl font-bold text-blue-900 mb-4">My Portfolio</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full mb-4"></div>
+          <p className="text-slate-600">Featured Projects & Real-World Applications</p>
         </div>
 
         {/* Main Projects Grid */}
@@ -129,7 +152,7 @@ const Portfolio = () => {
           {displayedProjects.map(({ id, logo, name, videoLink, tittle, techStack }) => (
             <div
               key={id}
-              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-2xl hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-emerald-400/50"
+              className="group bg-white border border-blue-100 rounded-2xl p-6 shadow-2xl hover:bg-blue-50 transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
             >
               <div className="relative overflow-hidden rounded-xl mb-6">
                 <img
@@ -137,15 +160,15 @@ const Portfolio = () => {
                   alt={name}
                   className="w-full h-48 object-cover-fit transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-blue-900 group-hover:text-blue-500 transition-colors duration-300">
                   {name}
                 </h3>
 
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {tittle}
                 </p>
 
@@ -153,7 +176,7 @@ const Portfolio = () => {
                   {techStack.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 border border-emerald-500/30"
+                      className="px-3 py-1 text-xs rounded-full bg-blue-100 text-blue-900 border border-blue-500/30"
                     >
                       {tech}
                     </span>
@@ -165,7 +188,7 @@ const Portfolio = () => {
                     href={videoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-medium transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/25 pointer-events-none opacity-60 cursor-not-allowed"
+                    className="live-demo-btn"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
@@ -180,15 +203,15 @@ const Portfolio = () => {
         {showAllProjects && (
           <div className="mt-12">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">More Projects I've Contributed To</h3>
-              <p className="text-gray-400">Role: Full Stack Developer & Team Lead</p>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">More Projects I've Contributed To</h3>
+              <p className="text-slate-600">Role: Full Stack Developer & Team Lead</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {additionalProjects.map(({ id, logo, tittle, name, videoLink, techStack }) => (
                 <div
                   key={id}
-                  className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-xl hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-emerald-400/50"
+                  className="group bg-white border border-blue-100 rounded-xl p-6 shadow-xl hover:bg-blue-50 transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
                 >
                   <div className="relative overflow-hidden rounded-xl mb-6">
                     <img
@@ -196,20 +219,20 @@ const Portfolio = () => {
                       alt={name}
                       className="w-full h-48 object-cover-fit transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <div className="space-y-4">
-                    <h4 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+                    <h4 className="text-lg font-bold text-blue-900 group-hover:text-blue-500 transition-colors duration-300">
                       {name}
                     </h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-slate-600 text-sm leading-relaxed">
                       {tittle}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {techStack.map((tech, index) => (
                         <span
                           key={index}
-                          className="px-2 py-1 text-xs rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 border border-emerald-500/30"
+                          className="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-900 border border-blue-500/30"
                         >
                           {tech}
                         </span>
@@ -221,7 +244,7 @@ const Portfolio = () => {
                         href={videoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-medium transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/25 pointer-events-none opacity-60 cursor-not-allowed"
+                        className="live-demo-btn"
                       >
                         <ExternalLink className="w-4 h-4" />
                         Live Demo
@@ -237,12 +260,12 @@ const Portfolio = () => {
 
         {/* Toggle Button */}
         <div className="text-center mt-16">
-          <p className="text-gray-400 mb-6">
+          <p className="text-slate-600 mb-6">
             {showAllProjects ? "Showing all projects" : "Want to see more of my work?"}
           </p>
           <button
             onClick={toggleProjects}
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold transition-all duration-300 shadow-lg shadow-emerald-500/50 hover:scale-105 cursor-pointer"
+            className="live-demo-btn"
           >
             {showAllProjects ? (
               <>

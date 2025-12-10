@@ -95,12 +95,12 @@ const Experience = () => {
   ];
 
   return (
-    <section name="Experience" className="py-20 px-6">
+    <section name="Experience" className="py-20 px-6 bg-slate-50">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Experience & Skills</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-blue-900 mb-4">Experience & Skills</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full mb-6"></div>
+          <p className="text-slate-600 text-lg max-w-3xl mx-auto">
             2 years of professional experience building enterprise-level applications with modern web technologies,
             specializing in full-stack development and cloud deployment.
           </p>
@@ -108,27 +108,26 @@ const Experience = () => {
 
         {/* Skills Section */}
         <div className="mb-20">
-          {/* <h3 className="text-2xl font-bold text-emerald-400 mb-8 text-center">Technical Expertise</h3> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map(({ id, category, icon, color, technologies }) => (
+            {skills.map(({ id, category, icon, technologies }) => (
               <div
                 key={id}
-                className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-2xl hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-emerald-400/50"
+                className="group bg-white border border-blue-100 rounded-2xl p-6 shadow-2xl hover:bg-blue-50 transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
               >
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-900 to-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                   <div className="text-white">
                     {icon}
                   </div>
                 </div>
 
-                <h4 className="text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300">
+                <h4 className="text-xl font-bold text-blue-900 mb-4 group-hover:text-blue-500 transition-colors duration-300">
                   {category}
                 </h4>
 
                 <ul className="space-y-2">
                   {technologies.map((tech, index) => (
-                    <li key={index} className="flex items-center text-gray-300 text-sm">
-                      <ChevronRight className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />
+                    <li key={index} className="flex items-center text-slate-600 text-sm">
+                      <ChevronRight className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
                       {tech}
                     </li>
                   ))}
@@ -140,25 +139,17 @@ const Experience = () => {
 
         {/* Experience Timeline */}
         <div className="space-y-8">
-          <h3 className="text-2xl font-bold text-emerald-400 mb-8 text-center">Professional Experience</h3>
+          <h3 className="text-2xl font-bold text-blue-900 mb-8 text-center">Professional Experience</h3>
 
           {experience.map(({ id, role, company, duration, location, achievements }) => (
             <div
               key={id}
-              className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-2xl hover:bg-white/10 transition-all duration-300"
+              className="relative bg-white border border-blue-100 rounded-2xl p-8 shadow-2xl hover:bg-blue-50 transition-all duration-300"
             >
-              {/* Timeline connector */}
-              {id !== experience.length && (
-                <div className="absolute left-8 -bottom-8 w-1 h-8 bg-gradient-to-b from-emerald-400 to-cyan-400 rounded-full"></div>
-              )}
-
-              {/* Timeline dot */}
-              {/* <div className="absolute left-6 top-8 w-4 h-4 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-full border-4 border-slate-900"></div> */}
-
               <div>
-                <h4 className="text-2xl font-bold text-white mb-2">{role}</h4>
-                <p className="text-emerald-400 font-semibold text-lg mb-1">{company}</p>
-                <div className="flex flex-col md:flex-row md:items-center gap-2 mb-6 text-gray-400">
+                <h4 className="text-2xl font-bold text-blue-900 mb-2">{role}</h4>
+                <p className="text-blue-500 font-semibold text-lg mb-1">{company}</p>
+                <div className="flex flex-col md:flex-row md:items-center gap-2 mb-6 text-slate-600">
                   <span>{duration}</span>
                   <span className="hidden md:block">•</span>
                   <span>{location}</span>
@@ -166,8 +157,8 @@ const Experience = () => {
 
                 <ul className="space-y-3">
                   {achievements.map((achievement, index) => (
-                    <li key={index} className="flex items-start text-gray-300">
-                      <ChevronRight className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <li key={index} className="flex items-start text-slate-600">
+                      <ChevronRight className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
                       {achievement}
                     </li>
                   ))}
