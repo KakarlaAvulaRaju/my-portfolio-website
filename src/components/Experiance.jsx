@@ -95,7 +95,19 @@ const Experience = () => {
   ];
 
   return (
-    <section name="Experience" className="py-20 px-6 bg-slate-50">
+    <section
+      name="Experience"
+      className="py-10 px-6"
+      style={{
+        background: '#FFFFFF',
+        backgroundImage: `
+          linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px)
+        `,
+        backgroundSize: '40px 40px',
+        position: 'relative'
+      }}
+    >
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-blue-900 mb-4">Experience & Skills</h2>
@@ -112,7 +124,16 @@ const Experience = () => {
             {skills.map(({ id, category, icon, technologies }) => (
               <div
                 key={id}
-                className="group bg-white border border-blue-100 rounded-2xl p-6 shadow-2xl hover:bg-blue-50 transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
+                className="group bg-white border border-blue-100 rounded-2xl p-6 shadow-2xl transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
+                style={{
+                  boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 20px #eee';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-900 to-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                   <div className="text-white">
@@ -144,7 +165,16 @@ const Experience = () => {
           {experience.map(({ id, role, company, duration, location, achievements }) => (
             <div
               key={id}
-              className="relative bg-white border border-blue-100 rounded-2xl p-8 shadow-2xl hover:bg-blue-50 transition-all duration-300"
+              className="relative bg-white border border-blue-100 rounded-2xl p-8 shadow-2xl transition-all duration-300"
+              style={{
+                boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 20px #eee';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+              }}
             >
               <div>
                 <h4 className="text-2xl font-bold text-blue-900 mb-2">{role}</h4>

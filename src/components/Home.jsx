@@ -32,14 +32,26 @@ const Home = () => {
   ];
 
   return (
-    <section name="Home" className="pt-32 pb-20 px-6 bg-white">
+    <section
+      name="Home"
+      className="pt-32 pb-20 px-6"
+      style={{
+        background: '#FFFFFF',
+        backgroundImage: `
+          linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px)
+        `,
+        backgroundSize: '40px 40px',
+        position: 'relative'
+      }}
+    >
       <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
             <div className="inline-block">
               <span
-                className="px-4 py-2 rounded-full text-blue-900 text-sm font-medium border border-blue-100"
+                className="bg-white px-4 py-2 rounded-full text-blue-900 text-sm font-medium border border-blue-100"
                 style={{
                   boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA',
                 }}
@@ -228,7 +240,7 @@ const Home = () => {
               <a
                 href="../../public/resume/MyResume.pdf"
                 download="My_Resume.pdf"
-                className="px-8 py-3 rounded-lg border border-blue-100 text-blue-900 font-semibold transition-all duration-300 text-center"
+                className="bg-white px-8 py-3 rounded-lg border border-blue-100 text-blue-900 font-semibold transition-all duration-300 text-center"
                 style={{
                   boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA',
                 }}
@@ -275,7 +287,7 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-blue-900 mb-4">Tech Stack</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-4 bg-white">
             {techStack.map((tech, index) => {
               const [hover, setHover] = React.useState(false);
               return (

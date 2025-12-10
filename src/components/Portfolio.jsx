@@ -116,7 +116,19 @@ const Portfolio = () => {
   };
 
   return (
-    <section name="Portfolio" className="py-20 px-6 bg-slate-50">
+    <section
+      name="Portfolio"
+      className="py-10 px-6"
+      style={{
+        background: '#FFFFFF',
+        backgroundImage: `
+          linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px)
+        `,
+        backgroundSize: '40px 40px',
+        position: 'relative'
+      }}
+    >
       <style>{`
         .live-demo-btn {
           display: inline-flex;
@@ -152,7 +164,16 @@ const Portfolio = () => {
           {displayedProjects.map(({ id, logo, name, videoLink, tittle, techStack }) => (
             <div
               key={id}
-              className="group bg-white border border-blue-100 rounded-2xl p-6 shadow-2xl hover:bg-blue-50 transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
+              className="group bg-white border border-blue-100 rounded-2xl p-6 shadow-2xl transition-all duration-300 hover:scale-102 hover:border-blue-500/50"
+              style={{
+                boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 20px #eee';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+              }}
             >
               <div className="relative overflow-hidden rounded-xl mb-6">
                 <img
@@ -211,7 +232,16 @@ const Portfolio = () => {
               {additionalProjects.map(({ id, logo, tittle, name, videoLink, techStack }) => (
                 <div
                   key={id}
-                  className="group bg-white border border-blue-100 rounded-xl p-6 shadow-xl hover:bg-blue-50 transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
+                  className="group bg-white border border-blue-100 rounded-xl p-6 shadow-xl transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
+                  style={{
+                    boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = '0 0 20px #eee';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                  }}
                 >
                   <div className="relative overflow-hidden rounded-xl mb-6">
                     <img

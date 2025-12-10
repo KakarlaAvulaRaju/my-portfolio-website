@@ -2,7 +2,19 @@ import React from "react";
 
 const About = () => {
   return (
-    <section name="About" className="py-20 px-6 bg-slate-50">
+    <section
+      name="About"
+      className="py-10 px-6"
+      style={{
+        background: '#FFFFFF',
+        backgroundImage: `
+          linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px)
+        `,
+        backgroundSize: '40px 40px',
+        position: 'relative'
+      }}
+    >
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-blue-900 mb-4">About Me</h2>

@@ -3,7 +3,19 @@ import { Mail, Phone, MapPin, Linkedin, Github, Send, User, MessageCircle } from
 
 const Contact = () => {
   return (
-    <section name="Contact" className="py-20 px-6 bg-slate-50">
+    <section
+      name="Contact"
+      className="py-10 px-6"
+      style={{
+        background: '#FFFFFF',
+        backgroundImage: `
+          linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px)
+        `,
+        backgroundSize: '40px 40px',
+        position: 'relative'
+      }}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-blue-900 mb-4">Let's Work Together</h2>
@@ -152,22 +164,22 @@ const Contact = () => {
                 type="submit"
                 className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-900 to-blue-500 hover:from-blue-800 hover:to-blue-400 text-white font-semibold rounded-lg py-3 px-6 transition-all duration-300 shadow-lg shadow-blue-500/50 hover:scale-101   hover:shadow-blue-500/75 cursor-pointer"
                 style={{}}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.backgroundImage = 'linear-gradient(to right, #1E3A8A 0%, #3B82F6 51%, #1E3A8A 100%)';
-                    e.currentTarget.style.backgroundSize = '200% auto';
-                    e.currentTarget.style.backgroundPosition = 'right center';
-                    e.currentTarget.style.color = '#fff';
-                    e.currentTarget.style.boxShadow = '0 0 20px #eee';
-                    e.currentTarget.style.borderRadius = '10px';
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.backgroundImage = '';
-                    e.currentTarget.style.backgroundSize = '';
-                    e.currentTarget.style.backgroundPosition = '';
-                    e.currentTarget.style.color = '';
-                    e.currentTarget.style.boxShadow = '';
-                    e.currentTarget.style.borderRadius = '';
-                  }}          
+                onMouseEnter={e => {
+                  e.currentTarget.style.backgroundImage = 'linear-gradient(to right, #1E3A8A 0%, #3B82F6 51%, #1E3A8A 100%)';
+                  e.currentTarget.style.backgroundSize = '200% auto';
+                  e.currentTarget.style.backgroundPosition = 'right center';
+                  e.currentTarget.style.color = '#fff';
+                  e.currentTarget.style.boxShadow = '0 0 20px #eee';
+                  e.currentTarget.style.borderRadius = '10px';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.backgroundImage = '';
+                  e.currentTarget.style.backgroundSize = '';
+                  e.currentTarget.style.backgroundPosition = '';
+                  e.currentTarget.style.color = '';
+                  e.currentTarget.style.boxShadow = '';
+                  e.currentTarget.style.borderRadius = '';
+                }}
               >
                 <Send className="w-5 h-5" />
                 Send Message
