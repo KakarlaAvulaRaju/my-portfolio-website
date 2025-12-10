@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative py-16 px-6 border-t border-blue-100 bg-slate-50">
+    <footer className="relative py-10 px-6 border-t border-blue-100 bg-slate-50">
       <div className="container mx-auto max-w-6xl">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-12 mb-12">
@@ -39,9 +39,10 @@ const Footer = () => {
                     smooth={true}
                     duration={500}
                     offset={-70}
-                    className="text-slate-600 hover:text-blue-900 transition-colors duration-300 cursor-pointer text-left block"
+                    className="text-slate-600 hover:text-blue-900 transition-colors duration-300 cursor-pointer text-left block relative inline-block group pb-1"
                   >
                     {item}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-900 to-blue-500 group-hover:w-full transition-all duration-500 ease-out"></span>
                   </Link>
                 </li>
               ))}
@@ -168,23 +169,23 @@ const Footer = () => {
             <button
               onClick={scrollToTop}
               className="p-3 rounded-lg bg-gradient-to-br from-blue-900 to-blue-500 text-white transition-all duration-300 hover:scale-110 shadow-lg shadow-blue-500/30 cursor-pointer"
-                  style={{}}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.backgroundImage = 'linear-gradient(to right, #1E3A8A 0%, #3B82F6 51%, #1E3A8A 100%)';
-                    e.currentTarget.style.backgroundSize = '200% auto';
-                    e.currentTarget.style.backgroundPosition = 'right center';
-                    e.currentTarget.style.color = '#fff';
-                    e.currentTarget.style.boxShadow = '0 0 20px #eee';
-                    e.currentTarget.style.borderRadius = '10px';
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.backgroundImage = '';
-                    e.currentTarget.style.backgroundSize = '';
-                    e.currentTarget.style.backgroundPosition = '';
-                    e.currentTarget.style.color = '';
-                    e.currentTarget.style.boxShadow = '';
-                    e.currentTarget.style.borderRadius = '';
-                  }}
+              style={{}}
+              onMouseEnter={e => {
+                e.currentTarget.style.backgroundImage = 'linear-gradient(to right, #1E3A8A 0%, #3B82F6 51%, #1E3A8A 100%)';
+                e.currentTarget.style.backgroundSize = '200% auto';
+                e.currentTarget.style.backgroundPosition = 'right center';
+                e.currentTarget.style.color = '#fff';
+                e.currentTarget.style.boxShadow = '0 0 20px #eee';
+                e.currentTarget.style.borderRadius = '10px';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.backgroundImage = '';
+                e.currentTarget.style.backgroundSize = '';
+                e.currentTarget.style.backgroundPosition = '';
+                e.currentTarget.style.color = '';
+                e.currentTarget.style.boxShadow = '';
+                e.currentTarget.style.borderRadius = '';
+              }}
             >
               <ArrowUp className="w-4 h-4" />
             </button>
