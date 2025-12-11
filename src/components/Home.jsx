@@ -34,18 +34,39 @@ const Home = () => {
   return (
     <section
       name="Home"
-      className="pt-32 pb-20 px-6"
+      className="pt-32 pb-20 px-6 introduction-profile-background"
       style={{
         background: '#FFFFFF',
-        backgroundImage: `
-          linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px)
-        `,
-        backgroundSize: '40px 40px',
         position: 'relative'
       }}
     >
-      <div className="container mx-auto max-w-7xl">
+      {/* Grid Pattern Layer */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(30, 58, 138, 0.06) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+          zIndex: 0
+        }}
+      />
+
+      {/* Radial Gradients Layer */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 12% 100%, #ffe2b0f5 1%, #ffe2b0f5 5px, #0000 15%),
+            radial-gradient(circle at 95% -15%, #da4df166 5%, #0000 30%),
+            radial-gradient(circle at 100%, #c4f5e9b2 2%, #0000 35%)
+          `,
+          zIndex: 1
+        }}
+      />
+
+      <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
@@ -270,7 +291,7 @@ const Home = () => {
           <div className="hidden md:flex justify-center">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
-              <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-blue-900/20 shadow-2xl shadow-blue-500/30">
+              <div className="relative w-110 h-110 rounded-full overflow-hidden border-2 border-blue-900/20 shadow-2xl shadow-blue-500/30">
                 <img
                   src="Raju.png"
                   alt="Kakarla Avula Raju - Full Stack Developer"
@@ -287,18 +308,17 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-blue-900 mb-4">Tech Stack</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-4 bg-white">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-6 bg-white">
             {techStack.map((tech, index) => {
               const [hover, setHover] = React.useState(false);
               return (
                 <div
                   key={index}
-                  className="p-4 rounded-xl border border-blue-100 transition-all duration-300 hover:bg-blue-200 hover:scale-105 hover:border-blue-500/50 relative"
+                  className="p-4 rounded-xl bg-white transition-all duration-300 hover:scale-105 relative"
                   style={{
-                    background: 'transparent',
                     boxShadow: hover
-                      ? '0 0 0 1px #3B82F6, 0 0 8px 1px #3B82F6AA'
-                      : '0 0 0 1px #3B82F6, 0 0 4px 1px #3B82F622',
+                      ? '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA'
+                      : '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)',
                   }}
                   onMouseEnter={() => setHover(true)}
                   onMouseLeave={() => setHover(false)}

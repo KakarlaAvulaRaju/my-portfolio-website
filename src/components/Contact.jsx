@@ -111,18 +111,50 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-blue-900">Send a Message</h3>
             </div>
 
+            <style>{`
+              .input-glow-wrapper {
+                position: relative;
+                overflow: hidden;
+                border-radius: 12px;
+              }
+              .input-glow-wrapper::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background: linear-gradient(90deg, #1E3A8A, #3B82F6, #60A5FA);
+                transition: width 0.4s ease;
+                box-shadow: 0 0 8px #3B82F6;
+                border-radius: 0 0 12px 12px;
+              }
+              .input-glow-wrapper:focus-within::after {
+                width: 100%;
+              }
+              .input-glow {
+                transition: all 0.3s ease;
+                border-radius: 12px;
+              }
+              .input-glow:focus {
+                background: white;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+                border-radius: 12px;
+              }
+            `}</style>
             <form
               action="https://getform.io/f/bgdjmnja"
               method="POST"
               className="space-y-6"
             >
-              <div>
+              <div className="input-glow-wrapper">
                 <label className="block text-slate-600 font-medium mb-2" htmlFor="name">
                   <User className="w-4 h-4 inline mr-2 text-blue-500" />
                   Full Name <span className="text-red-400">*</span>
                 </label>
                 <input
-                  className="w-full bg-blue-50 border border-blue-100 rounded-lg py-3 px-4 text-blue-900 placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  className="input-glow w-full border-0 border-b-2 border-blue-200 py-3 px-4 text-blue-900 placeholder-slate-400 focus:outline-none transition-all duration-300"
                   id="name"
                   type="text"
                   name="name"
@@ -131,13 +163,13 @@ const Contact = () => {
                 />
               </div>
 
-              <div>
+              <div className="input-glow-wrapper">
                 <label className="block text-slate-600 font-medium mb-2" htmlFor="email">
                   <Mail className="w-4 h-4 inline mr-2 text-blue-500" />
                   Email Address <span className="text-red-400">*</span>
                 </label>
                 <input
-                  className="w-full bg-blue-50 border border-blue-100 rounded-lg py-3 px-4 text-blue-900 placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  className="input-glow w-full border-0 border-b-2 border-blue-200 py-3 px-4 text-blue-900 placeholder-slate-400 focus:outline-none transition-all duration-300"
                   id="email"
                   type="email"
                   name="email"
@@ -146,13 +178,13 @@ const Contact = () => {
                 />
               </div>
 
-              <div>
+              <div className="input-glow-wrapper">
                 <label className="block text-slate-600 font-medium mb-2" htmlFor="message">
                   <MessageCircle className="w-4 h-4 inline mr-2 text-blue-500" />
                   Message <span className="text-red-400">*</span>
                 </label>
                 <textarea
-                  className="w-full bg-blue-50 border border-blue-100 rounded-lg py-3 px-4 text-blue-900 placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 h-32 resize-none"
+                  className="input-glow w-full border-0 border-b-2 border-blue-200 py-3 px-4 text-blue-900 placeholder-slate-400 focus:outline-none transition-all duration-300 h-32 resize-none"
                   id="message"
                   name="message"
                   placeholder="Tell me about your project or just say hello!"

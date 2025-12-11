@@ -21,7 +21,18 @@ const About = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full"></div>
         </div>
 
-        <div className="bg-white border border-blue-100 rounded-2xl p-8 shadow-2xl">
+        <div
+          className="bg-white rounded-2xl p-8 transition-all duration-300"
+          style={{
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+          }}
+        >
           <p className="text-slate-600 text-lg leading-relaxed mb-8">
             Bonjour😉, I'm <span className="text-blue-900 font-semibold">Kakarla Avula Raju</span>,
             a passionate <span className="text-blue-900">Full Stack Developer</span> with over 2 years of
@@ -46,19 +57,52 @@ const About = () => {
             <h3 className="text-2xl font-bold text-blue-900">Education</h3>
 
             <div className="space-y-4">
-              <div className="p-6 rounded-xl bg-blue-100 border border-blue-900/20">
+              <div
+                className="p-6 rounded-xl bg-white transition-all duration-300"
+                style={{
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+                }}
+              >
                 <h4 className="text-xl font-bold text-blue-900">Bachelor of Technology in Civil Engineering</h4>
                 <p className="text-slate-600 mt-1">Rajiv Gandhi University of Knowledge and Technology, Nuzvid</p>
                 <p className="text-blue-500 mt-2">March 2019 - May 2023 | CGPA: 8.45/10</p>
               </div>
 
-              <div className="p-6 rounded-xl bg-blue-50 border border-blue-500/20">
+              <div
+                className="p-6 rounded-xl bg-white transition-all duration-300"
+                style={{
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+                }}
+              >
                 <h4 className="text-xl font-bold text-blue-900">Pre-University Course (MPC)</h4>
                 <p className="text-slate-600 mt-1">Rajiv Gandhi University of Knowledge and Technology, Nuzvid</p>
                 <p className="text-blue-500 mt-2">August 2017 - March 2019 | CGPA: 7.5/10</p>
               </div>
 
-              <div className="p-6 rounded-xl bg-blue-50 border border-blue-900/20">
+              <div
+                className="p-6 rounded-xl bg-white transition-all duration-300"
+                style={{
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+                }}
+              >
                 <h4 className="text-xl font-bold text-blue-900">SSC Class 10</h4>
                 <p className="text-slate-600 mt-1">Z.P High School, Bhupathipalli</p>
                 <p className="text-blue-500 mt-2">July 2016 - March 2017 | CGPA: 10/10</p>
@@ -68,22 +112,66 @@ const About = () => {
             <h3 className="text-2xl font-bold text-blue-900 mt-8">Skills & Expertise</h3>
 
             <div className="grid md:grid-cols-2 gap-6 mt-6">
-              <div className="p-4 rounded-xl bg-blue-50 border border-blue-900/20">
+              <div
+                className="p-4 rounded-xl bg-white transition-all duration-300"
+                style={{
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+                }}
+              >
                 <h4 className="text-lg font-bold text-blue-900 mb-2">Programming Languages</h4>
                 <p className="text-slate-600">C#, Python (Basic), JavaScript, TypeScript</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-blue-50 border border-blue-900/20">
+              <div
+                className="p-4 rounded-xl bg-white transition-all duration-300"
+                style={{
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+                }}
+              >
                 <h4 className="text-lg font-bold text-blue-900 mb-2">Frameworks & Libraries</h4>
                 <p className="text-slate-600">ASP.NET Core (6, 7, 8), Web API, ASP.NET MVC, Angular 8, React TS, PrimeNG, Entity Framework Core</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-blue-50 border border-blue-900/20">
+              <div
+                className="p-4 rounded-xl bg-white transition-all duration-300"
+                style={{
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+                }}
+              >
                 <h4 className="text-lg font-bold text-blue-900 mb-2">Frontend Technologies</h4>
                 <p className="text-slate-600">HTML, CSS, SCSS, Bootstrap, Tailwind CSS, JavaScript, TypeScript, Responsive Design</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-blue-50 border border-blue-900/20">
+              <div
+                className="p-4 rounded-xl bg-white transition-all duration-300"
+                style={{
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+                }}
+              >
                 <h4 className="text-lg font-bold text-blue-900 mb-2">Database & Cloud</h4>
                 <p className="text-slate-600">MySQL, SQL Server, Azure DevOps, Azure Portal, Azure Cognitive Services, Azure Functions</p>
               </div>
@@ -92,7 +180,18 @@ const About = () => {
             <h3 className="text-2xl font-bold text-blue-900 mt-8">Professional Experience</h3>
 
             <div className="space-y-6 mt-6">
-              <div className="p-6 rounded-xl bg-blue-100 border border-blue-900/20">
+              <div
+                className="p-6 rounded-xl bg-white transition-all duration-300"
+                style={{
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+                }}
+              >
                 <h4 className="text-xl font-bold text-blue-900">Full Stack Developer</h4>
                 <p className="text-slate-600 mt-1">Deccansoft Software Services Private Limited, Hyderabad</p>
                 <p className="text-blue-500 mt-2">September 2023 - Present</p>
@@ -105,7 +204,18 @@ const About = () => {
                 </ul>
               </div>
 
-              <div className="p-6 rounded-xl bg-blue-50 border border-blue-900/20">
+              <div
+                className="p-6 rounded-xl bg-white transition-all duration-300"
+                style={{
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
+                }}
+              >
                 <h4 className="text-xl font-bold text-blue-900">Intern - Full Stack Developer</h4>
                 <p className="text-slate-600 mt-1">Kota Corporation</p>
                 <p className="text-blue-500 mt-2">January 2023 - August 2023</p>

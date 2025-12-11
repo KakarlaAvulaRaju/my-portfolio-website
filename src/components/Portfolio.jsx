@@ -164,15 +164,15 @@ const Portfolio = () => {
           {displayedProjects.map(({ id, logo, name, videoLink, tittle, techStack }) => (
             <div
               key={id}
-              className="group bg-white border border-blue-100 rounded-2xl p-6 shadow-2xl transition-all duration-300 hover:scale-102 hover:border-blue-500/50"
+              className="group bg-white rounded-2xl p-6 transition-all duration-300 hover:scale-102"
               style={{
-                boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA'
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 0 20px #eee';
+                e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
               }}
             >
               <div className="relative overflow-hidden rounded-xl mb-6">
@@ -232,15 +232,15 @@ const Portfolio = () => {
               {additionalProjects.map(({ id, logo, tittle, name, videoLink, techStack }) => (
                 <div
                   key={id}
-                  className="group bg-white border border-blue-100 rounded-xl p-6 shadow-xl transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
+                  className="group bg-white rounded-xl p-6 transition-all duration-300 hover:scale-105"
                   style={{
-                    boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA'
+                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = '0 0 20px #eee';
+                    e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                    e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
                   }}
                 >
                   <div className="relative overflow-hidden rounded-xl mb-6">

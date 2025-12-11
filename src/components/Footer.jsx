@@ -30,8 +30,33 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
+            <style>{`
+              .footer-link-glow {
+                position: relative;
+                display: inline-block;
+                padding-bottom: 4px;
+              }
+              .footer-link-glow::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: linear-gradient(90deg, #1E3A8A, #3B82F6, #60A5FA);
+                transition: width 0.4s ease;
+                box-shadow: 0 0 6px #3B82F6;
+                border-radius: 10px;
+              }
+              .footer-link-glow:hover::after {
+                width: 100%;
+              }
+              .footer-link-glow:hover {
+                transform: translateX(4px);
+              }
+            `}</style>
             <h4 className="text-lg font-bold text-blue-900">Quick Links</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {['Home', 'About', 'Portfolio', 'Experience', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
@@ -39,10 +64,9 @@ const Footer = () => {
                     smooth={true}
                     duration={500}
                     offset={-70}
-                    className="text-slate-600 hover:text-blue-900 transition-colors duration-300 cursor-pointer text-left block relative inline-block group pb-1"
+                    className="footer-link-glow text-slate-600 hover:text-blue-900 transition-all duration-300 cursor-pointer font-medium"
                   >
                     {item}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-900 to-blue-500 group-hover:w-full transition-all duration-500 ease-out"></span>
                   </Link>
                 </li>
               ))}

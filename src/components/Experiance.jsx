@@ -124,15 +124,15 @@ const Experience = () => {
             {skills.map(({ id, category, icon, technologies }) => (
               <div
                 key={id}
-                className="group bg-white border border-blue-100 rounded-2xl p-6 shadow-2xl transition-all duration-300 hover:scale-105 hover:border-blue-500/50"
+                className="group bg-white rounded-2xl p-6 transition-all duration-300 hover:scale-105"
                 style={{
-                  boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA'
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 20px #eee';
+                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
                 }}
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-900 to-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -165,15 +165,15 @@ const Experience = () => {
           {experience.map(({ id, role, company, duration, location, achievements }) => (
             <div
               key={id}
-              className="relative bg-white border border-blue-100 rounded-2xl p-8 shadow-2xl transition-all duration-300"
+              className="relative bg-white rounded-2xl p-8 transition-all duration-300"
               style={{
-                boxShadow: '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA'
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 0 20px #eee';
+                e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = '0 0 0 1px #3B82F6, 0 0 12px 1px #3B82F6AA';
+                e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(59, 130, 246, 0.1)';
               }}
             >
               <div>
