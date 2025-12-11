@@ -19,6 +19,23 @@ const Navbar = () => {
 
   return (
     <>
+      <style>{`
+        @keyframes fadeInScale {
+          from {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        .mobile-menu-animate {
+          animation: fadeInScale 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      `}</style>
+
       {/* Header */}
       <header className="fixed top-0 w-full z-50 bg-white bg-opacity-95 backdrop-blur-lg shadow-md border-b border-blue-100">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -81,7 +98,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menu && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-white bg-opacity-95 backdrop-blur-lg flex flex-col items-center justify-center z-40">
+        <div className="mobile-menu-animate fixed top-0 left-0 w-full h-[85vh] bg-white bg-opacity-95 backdrop-blur-lg flex flex-col items-center justify-center z-40 rounded-b-3xl shadow-2xl">
           <button onClick={handleMenu} className="absolute top-5 right-5">
             <IoCloseSharp size={32} className="text-blue-900" />
           </button>
