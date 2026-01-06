@@ -97,7 +97,7 @@ const Home = () => {
             </div>
 
             <p className="text-slate-600 text-lg leading-relaxed">
-              I'm a passionate <span className="text-blue-900 font-semibold">Full Stack Developer</span> with over 2 years of
+              I'm a passionate <span className="text-blue-900 font-semibold">Full Stack Developer</span> with over 2.5+ years of
               hands-on experience building scalable and modern web applications using
               <span className="text-blue-900"> ASP.NET Core, Angular, and React TypeScript</span>.
               I specialize in developing, deploying, and maintaining enterprise-grade solutions

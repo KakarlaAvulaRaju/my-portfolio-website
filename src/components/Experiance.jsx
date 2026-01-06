@@ -68,7 +68,7 @@ const Experience = () => {
         "Creating and maintaining detailed Wiki documentation for each deployment — including versioning, domain URLs, database changes, and migration steps.",
         "Documenting deployment histories, feature releases, and rollback plans for audit and internal tracking purposes.",
         "Uploading and updating daily task progress in Deccansoft’s internal portal and Azure Boards to maintain transparent workflow tracking.",
-        "Collaborating with team leads (Sandeep MVN, Vikas Kumar) to clarify requirements, validate deliverables, and ensure task accuracy.",
+        "Collaborating with team leads to clarify requirements, validate deliverables, and ensure task accuracy.",
         "Working independently on end-to-end modules and occasionally leading small teams in developing white-labeled insurance and financial applications.",
         "Leading development sprints, assigning tasks, and performing peer code reviews to ensure adherence to coding standards and best practices.",
         "Contributing to the automation of workflows through Azure AI and Cognitive Services for smarter data processing and client experience.",
@@ -86,10 +86,9 @@ const Experience = () => {
       duration: "January 2023 - August 2023",
       location: "Hyderabad, India",
       achievements: [
-        "Completed 8-month intensive internship program",
+        "Completed 8-month internship program",
         "Gained hands-on experience with C#, HTML, CSS, and Bootstrap",
-        "Developed foundational understanding of web application architecture",
-        "Participated in collaborative development projects"
+        "Developed foundational understanding of web application architecture"
       ]
     }
   ];
@@ -113,7 +112,7 @@ const Experience = () => {
           <h2 className="text-4xl font-bold text-blue-900 mb-4">Experience & Skills</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 text-lg max-w-3xl mx-auto">
-            2 years of professional experience building enterprise-level applications with modern web technologies,
+            2.5+ years of professional experience building enterprise-level applications with modern web technologies,
             specializing in full-stack development and cloud deployment.
           </p>
         </div>

@@ -35,7 +35,7 @@ const About = () => {
         >
           <p className="text-slate-600 text-lg leading-relaxed mb-8">
             Bonjour😉, I'm <span className="text-blue-900 font-semibold">Kakarla Avula Raju</span>,
-            a passionate <span className="text-blue-900">Full Stack Developer</span> with over 2 years of
+            a passionate <span className="text-blue-900">Full Stack Developer</span> with over 2.5+ years of
             hands-on experience in building scalable and high-performance web applications.
             I specialize in <span className="text-blue-900">ASP.NET Core, Angular, and React TypeScript</span>,
             creating seamless end-to-end solutions that blend performance with great user experience.
@@ -70,8 +70,12 @@ const About = () => {
                 }}
               >
                 <h4 className="text-xl font-bold text-blue-900">Bachelor of Technology in Civil Engineering</h4>
-                <p className="text-slate-600 mt-1">Rajiv Gandhi University of Knowledge and Technology, Nuzvid</p>
+                <p className="text-slate-600 mt-1">Rajiv Gandhi University of Knowledge and Technology, Nuzvid - (IIIT)</p>
                 <p className="text-blue-500 mt-2">March 2019 - May 2023 | CGPA: 8.45/10</p>
+                <p className="text-slate-700 mt-3 text-sm">
+                  <span className="font-semibold">Technical Exposure : </span> 
+                  C Programming, Database Management Systems (SQL concepts)
+                </p>
               </div>
 
               <div
@@ -87,8 +91,12 @@ const About = () => {
                 }}
               >
                 <h4 className="text-xl font-bold text-blue-900">Pre-University Course (MPC)</h4>
-                <p className="text-slate-600 mt-1">Rajiv Gandhi University of Knowledge and Technology, Nuzvid</p>
+                <p className="text-slate-600 mt-1">Rajiv Gandhi University of Knowledge and Technology, Nuzvid - (IIIT)</p>
                 <p className="text-blue-500 mt-2">August 2017 - March 2019 | CGPA: 7.5/10</p>
+                <p className="text-slate-700 mt-3 text-sm">
+                  <span className="font-semibold">Technical Exposure : </span> 
+                  Python (Basics), HTML, CSS, MS Office
+                </p>
               </div>
 
               <div
@@ -106,6 +114,10 @@ const About = () => {
                 <h4 className="text-xl font-bold text-blue-900">SSC Class 10</h4>
                 <p className="text-slate-600 mt-1">Z.P High School, Bhupathipalli</p>
                 <p className="text-blue-500 mt-2">July 2016 - March 2017 | CGPA: 10/10</p>
+                <p className="text-slate-700 mt-3 text-sm">
+                  <span className="font-semibold">Technical Exposure : </span> 
+                  Computer fundamentals
+                </p>
               </div>
             </div>
 
@@ -157,7 +169,7 @@ const About = () => {
                 }}
               >
                 <h4 className="text-lg font-bold text-blue-900 mb-2">Frontend Technologies</h4>
-                <p className="text-slate-600">HTML, CSS, SCSS, Bootstrap, Tailwind CSS, JavaScript, TypeScript, Responsive Design</p>
+                <p className="text-slate-600">HTML, CSS, SCSS, Bootstrap, Tailwind CSS, Responsive Design</p>
               </div>
 
               <div
@@ -173,7 +185,7 @@ const About = () => {
                 }}
               >
                 <h4 className="text-lg font-bold text-blue-900 mb-2">Database & Cloud</h4>
-                <p className="text-slate-600">MySQL, SQL Server, Azure DevOps, Azure Portal, Azure Cognitive Services, Azure Functions</p>
+                <p className="text-slate-600">MySQL, SQL Server, Azure DevOps, Azure Portal, Azure Cognitive Services, Azure Functions, Azure Service Bus</p>
               </div>
             </div>
 
