@@ -53,19 +53,6 @@ const Home = () => {
         }}
       />
 
-      {/* Radial Gradients Layer */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 12% 100%, #ffe2b0f5 1%, #ffe2b0f5 5px, #0000 15%),
-            radial-gradient(circle at 95% -15%, #da4df166 5%, #0000 30%),
-            radial-gradient(circle at 100%, #c4f5e9b2 2%, #0000 35%)
-          `,
-          zIndex: 1
-        }}
-      />
-
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
